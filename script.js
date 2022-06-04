@@ -5,7 +5,7 @@ const form = document.querySelector("form");
 let space;
 let arr = Array();
 
-fetch("http://127.0.0.1:8000/api/space/")
+fetch("https://workspaceapi.herokuapp.com/api/space")
 .then(response => response.json())
 .then(data => {
   data.forEach(d => {
