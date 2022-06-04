@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>booking form</title>
+  <style>
+    label, input {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form action="http://127.0.0.1:8000/api/bookings/new" method="post">
+      <label for="space">Space:</label>
+      <select name="space_id" id="spaces">
+        <option value="" selected disabled>Select space</option>
+      </select>
+
+      <label for="date-selector">Choose date:</label>
+      <input type="date" name="date-selector" id="date-selector">
+
+      <input type="text" name="date" id="date">
+
+      <button type="submit">submit</button>
+    </form>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
