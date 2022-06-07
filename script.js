@@ -8,8 +8,9 @@ let arr = Array();
 let dateSearch;
 
 // const endpoint = "http://127.0.0.1:8000/api/available/";
+// const endpoint = "https://workspaceapi.herokuapp.com/api/available/";
 
-fetch("http://127.0.0.1:8000/api/space-type/")
+fetch("https://workspaceapi.herokuapp.com/api/space-type/")
 .then(response => response.json())
 .then(data => {
   console.log(data);
@@ -24,7 +25,7 @@ fetch("http://127.0.0.1:8000/api/space-type/")
 // search for available spaces
 spaceTypes.addEventListener('change', e => {
   console.log(dateSearch.toString());
-  let endpoint = ("http://127.0.0.1:8000/api/available"+'/'+dateSearch+'/'+e.target.value);
+  let endpoint = ("https://workspaceapi.herokuapp.com/api/available"+'/'+dateSearch+'/'+e.target.value);
 
   let opt = document.createElement("option");
   opt.textContent = "Select space";
