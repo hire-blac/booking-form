@@ -14,20 +14,28 @@
 </head>
 <body>
   <div>
-    <form action="https://workspaceapi.herokuapp.com/api/bookings/new" method="post">
-      <label for="space">Space:</label>
-      <select name="space_id" id="spaces">
-        <option value="" selected disabled>Select space</option>
-      </select>
+    <form action="http://127.0.0.1:8000/api/bookings/new" method="post">
 
       <label for="date-selector">Choose date:</label>
       <input type="date" name="date-selector" id="date-selector">
 
       <input type="text" name="date" id="date">
 
+      <label for="space-types">Space Types:</label>
+      <select name="space-types" id="space-types" disabled>
+        <option value="" selected disabled >select space type</option>
+      </select>
+
+      <label for="spaces">Spaces:</label>
+      <select name="space_id" id="spaces">
+        <option value="" selected disabled>Select space</option>
+      </select>
+
       <button type="submit">submit</button>
     </form>
   </div>
 </body>
 <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </html>
