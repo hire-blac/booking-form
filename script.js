@@ -29,6 +29,8 @@ bookingTypes.addEventListener('change', e => {
     
     let endpoint = ("http://127.0.0.1:8000/api/available"+'/'+dateSearch);
 
+    document.getElementById("number_hours").removeAttribute("disabled");
+
     let opt = document.createElement("option");
     opt.textContent = "Select space";
     opt.setAttribute("disabled", "disabled")
@@ -52,6 +54,7 @@ bookingTypes.addEventListener('change', e => {
     });
 
   } else {
+    document.getElementById("number_hours").setAttribute("disabled", "disabled");
     startTime.setAttribute("disabled", "disabled");
     spaceTypes.removeAttribute("disabled");
     form.setAttribute("action", "http://127.0.0.1:8000/api/bookings/new");
